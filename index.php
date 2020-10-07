@@ -6,19 +6,20 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
 
     $faq = [
         [
-            "question" => "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
+            "question" => "How are you implementing the recent Court of Justice of the European Union (CJEU) decision on the right to be forgotten?",
 
-            "answer" => "La recente decisione della Corte di giustizia dell'Unione europea ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.",
+            "answer" => "The recent ruling by the Court of Justice of the European Union has profound consequences for search engines in Europe. The court found that certain users have the right to ask search engines like Google to remove results for queries that include the person's name. To qualify, the results shown would need to be inadequate, irrelevant, no longer relevant, or excessive..",
         ],
         [
-            "question" => "Come fa Google a proteggere la mia privacy e a tenere le mie informazioni al sicuro?",
+            "question" => "How does Google protect my privacy and keep my information secure?",
             
-            "answer" => "risposta",
+            "answer" => "We know security and privacy are important to you – and they are important to us, too. We make it a priority to provide strong security and give you confidence that your information is safe and accessible when you need it.
+
+            ",
         ],
 
     ];
 
-    var_dump($faq)
 ?>
 
 
@@ -27,17 +28,15 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        <li>
-            <?php 
-                foreach ( $faq as $block){
-                    var_dump($block);
-                }
-            ?>
-        </li>
-    </ul>
+    <?php 
+        foreach ( $faq as $block){
+            echo "<h2>".$block["question"]."</h2>";
+            echo "<p>".$block["answer"]."</p>";
+        }
+    ?>
 </body>
 </html>
